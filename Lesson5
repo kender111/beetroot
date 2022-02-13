@@ -1,0 +1,51 @@
+# Task 1
+
+import random
+
+player_digit = int(input('Please, enter a number from 1 to 10: '))
+
+if 1 <= player_digit <= 10:
+    computer_digit = random.randint(1, 10)
+    if computer_digit < player_digit or computer_digit > player_digit:
+        print(f'I\'m win! Correct number: {computer_digit}')
+    elif computer_digit == player_digit:
+        print('Great! You guessed it!')
+else:
+    print('Incorrect data, the game is over')
+    
+# Task 2
+
+username = input("Please, tell me your name ")
+age = int(input())
+print(f"Hello {username}, on your next birthday you’ll be {age + 1} years")
+
+# Task 3
+
+import random
+
+input_word = input()
+shuffled = random.sample(input_word, len(input_word))
+print(''.join(shuffled))
+
+# Task 4
+import random
+
+actions = ('+', '-', '*')
+digit1 = random.randint(10, 20)
+digit2 = random.randint(1, 9)
+action = random.choice(actions)
+
+if action == '+':
+    correct_answer = digit1 + digit2
+elif action == '-':
+    correct_answer = digit1 - digit2
+elif action == '*':
+    correct_answer = digit1 * digit2
+    
+print('What is ' + str(digit1) + action + str(digit2) + '? ')
+users_answer = int(input())
+
+if correct_answer == users_answer:
+    print('Correct! You are a math genius!')
+elif correct_answer != users_answer:
+    print(f'No! You made a mistake! Correct answer: {correct_answer}')
