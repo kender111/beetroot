@@ -30,7 +30,7 @@ while number < 100:
     else:
         number += 1
         
-# 5
+# 5 
 
 surname = 'Beseda'
 digit_surname = len(surname)
