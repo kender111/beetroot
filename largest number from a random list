@@ -4,9 +4,11 @@ random_number_list = []
 while len(random_number_list) <= 9: # create a list of random numbers of length 10
     random_number_list.append(randint(-1000, 1000))
 print(random_number_list) # Checking list values
-# print(max(random_number_list)) # get the largest number of a list using a function max
+# get the largest number of a list using a function max
+# print(max(random_number_list)) 
 
-index_number = 0 # getting the largest value of a list with a loop while
+# getting the largest value of a list with a loop while
+index_number = 0 
 maximum = random_number_list[index_number]
 
 while index_number < len(random_number_list) - 1:
