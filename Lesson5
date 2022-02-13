@@ -30,22 +30,37 @@ print(''.join(shuffled))
 # Task 4
 import random
 
-actions = ('+', '-', '*')
-digit1 = random.randint(10, 20)
-digit2 = random.randint(1, 9)
-action = random.choice(actions)
+print('Let\'s play a game... If you earn 15 points, you are win')
+username = input('Please, tell me your name: ')
+count = 0
 
-if action == '+':
-    correct_answer = digit1 + digit2
-elif action == '-':
-    correct_answer = digit1 - digit2
-elif action == '*':
-    correct_answer = digit1 * digit2
-    
-print('What is ' + str(digit1) + action + str(digit2) + '? ')
-users_answer = int(input())
+while count < 15:
+    actions = ('+', '-', '*')
+    digit1 = random.randint(10, 20)
+    digit2 = random.randint(1, 10)
+    action = random.choice(actions)
 
-if correct_answer == users_answer:
-    print('Correct! You are a math genius!')
-elif correct_answer != users_answer:
-    print(f'No! You made a mistake! Correct answer: {correct_answer}')
+    if action == '+':
+        correct_answer = digit1 + digit2
+    elif action == '-':
+        correct_answer = digit1 - digit2
+    elif action == '*':
+        correct_answer = digit1 * digit2
+
+    while -15 < count:
+        print(f'Your count: {count}')
+        print('What is ' + str(digit1) + action + str(digit2) + '? ')
+        users_answer = int(input())
+        if correct_answer == users_answer:
+            count += 1
+            print('Correct! You are a math genius!')
+            break
+        elif correct_answer != users_answer:
+            count -= 1
+            print(f'No! You made a mistake! Correct answer: {correct_answer}')
+            break
+    else:
+        print(f'You loser, {username}!')
+else:
+    print(f'{username}, You\'ve got all the points in the world! CONGRATULATIONS!!!')
+
