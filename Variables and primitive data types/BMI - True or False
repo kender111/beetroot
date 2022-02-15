@@ -1,0 +1,2 @@
+height, weight = 1.7, 60 # The program as such will make sense if instead of the set variables to set float (input ())
+print('Your BMI is normal: ', 18.5 < (weight / height ** 2) < 25)
