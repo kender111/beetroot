@@ -1,0 +1,3 @@
+input_number = input('Put your phone number, please: ')
+check = (len(input_number) == 12 and '380' == input_number[:3] and input_number.isdigit()) # замість .isdigit() можна використати .isdecimal()
+print(check)
